@@ -16,10 +16,22 @@ class UserSeeder extends Seeder
     {
         User::factory(5)->create();
         User::create([
-            'name' => 'Saiful Bahri',
-            'email' => 'superuser@gmail.com',
+            'name' => 'Lina Fadilah',
+            'email' => 'linahardiyana@gmail.com',
             'email_verified_at'  => now(),
+            'role' => 'admin',
             'password' => Hash::make('123456'),
+            'phone' => '6281322522106',
+            'bio' => 'anak baik',
+        ]);
+        User::create([
+            'name' => 'Super Admin',
+            'email' => 'superadmin@gmail.com',
+            'email_verified_at'  => now(),
+            'role' => 'superadmin',
+            'password' => Hash::make('123456'),
+            'phone' => '6281322521234',
+            'bio' => 'anak baik',
         ]);
     }
 }
